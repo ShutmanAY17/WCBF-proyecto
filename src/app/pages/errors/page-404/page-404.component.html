@@ -1,14 +1,43 @@
-<div class="container-fluid py-0">
-    <div class="row no-gutters">
-        <div class="col-sm-12 text-center">
-            <div class="iq-error pb-5">
-              <h1 class="text-primary">404</h1>
-                <h2 class="mb-0">Oops! This Page is Not Found.</h2>
-                <p>The requested page dose not exist.</p>
-                <div class="">
-                    <a class="btn btn-primary" routerLink="/dashboard/home"><i class="ri-home-4-line"></i>Back to Home</a> 
-                </div>                           
-            </div>
-        </div>
-    </div>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .user-data {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .user-data p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Mi perfil</h1>
+<div class="user-data">
+    <p><strong>Nombre:</strong> Aide Yunuen</p>
+    <p><strong>Correo Electrónico:</strong> aide.yunuen.com</p>
+    <p><strong>Dirección:</strong> Irapuato 7</p>
+    <p><strong>Teléfono:</strong> +123 456 7890</p>
+    <!-- Otros datos relevantes -->
 </div>
+<div class="">
+    <a class="btn btn-primary" routerLink="/dashboard/home"><i class="ri-home-4-line"></i>Back to Home</a>
+</div>
+</body>
+</html>
