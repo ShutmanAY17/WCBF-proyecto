@@ -63,19 +63,19 @@ NOTE: This file contains the styling for responsive Template.
                             General
 ---------------------------------------------------------------------*/
 *::-moz-selection {
-  background: #089bab;
+  background: #fa9cde;
   color: #fff;
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background: #089bab;
+  background: #fa9cde;
   color: #fff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #089bab;
+  background: #fa9cde;
   color: #fff;
   text-shadow: none;
 }
@@ -97,7 +97,7 @@ dl dd:last-child {
 
 a:hover {
   text-decoration: none;
-  color: #02818f;
+  color: #fa9cde;
 }
 
 .dropdown-item {
@@ -111,12 +111,12 @@ a:hover {
 /* scroller */
 .scroller {
   overflow-y: auto;
-  scrollbar-color: #089bab #eff7f8;
+  scrollbar-color:#fa9cde #eff7f8;
   scrollbar-width: thin;
 }
 
 .scroller::-webkit-scrollbar-thumb {
-  background-color: #089bab;
+  background-color: #fa9cde;
 }
 
 .scroller::-webkit-scrollbar-track {
@@ -125,12 +125,12 @@ a:hover {
 
 #sidebar-scrollbar {
   overflow-y: auto;
-  scrollbar-color: #089bab #eff7f8;
+  scrollbar-color: #fa9cde #eff7f8;
   scrollbar-width: thin;
 }
 
 #sidebar-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #089bab;
+  background-color: #fa9cde;
 }
 
 #sidebar-scrollbar::-webkit-scrollbar-track {
@@ -439,7 +439,7 @@ a:hover {
 .dropdown-menu .dropdown-item:focus,
 .dropdown-menu .dropdown-item:hover {
   background: transparent;
-  color: #089bab;
+  color: #fa9cde;
 }
 
 /*--------------*/
@@ -494,7 +494,7 @@ a:hover {
 .iq-list-style-1 li a:hover,
 .iq-list-style-1 li a:focus {
   text-decoration: none;
-  color: #089bab;
+  color: #fa9cde;
 }
 
 .iq-list-style-1.text-white li a,
@@ -613,7 +613,7 @@ a:hover {
   -moz-border-radius: 7px;
   border-radius: 7px;
   background: #eff7f8;
-  color: #089bab !important;
+  color: #fa9cde !important;
 }
 
 .iq-social-media li a:hover {
@@ -634,12 +634,12 @@ a:hover {
   right: 270px;
   z-index: -1;
   border-radius: 40px;
-  background: rgba(8, 155, 171, 1);
-  background: -moz-linear-gradient(left, rgba(8, 155, 171, 1) 0%, rgba(13, 181, 200, 1) 100%);
+  background: rgb(245, 133, 217);
+  background: -moz-linear-gradient(left, rgb(245, 133, 217) 0%, rgba(13, 181, 200, 1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(8, 155, 171, 1)), color-stop(100%, rgba(13, 181, 200, 1)));
-  background: -webkit-linear-gradient(left, rgba(8, 155, 171, 1) 0%, rgba(13, 181, 200, 1) 100%);
-  background: -o-linear-gradient(left, rgba(8, 155, 171, 1) 0%, rgba(13, 181, 200, 1) 100%);
-  background: -ms-linear-gradient(left, rgba(8, 155, 171, 1) 0%, rgba(13, 181, 200, 1) 100%);
+  background: -webkit-linear-gradient(left, rgb(245, 133, 217) 0%, rgba(13, 181, 200, 1) 100%);
+  background: -o-linear-gradient(left, rgb(245, 133, 217) 0%, rgba(13, 181, 200, 1) 100%);
+  background: -ms-linear-gradient(left,rgb(245, 133, 217) 0%, rgba(13, 181, 200, 1) 100%);
   background: linear-gradient(to right, rgba(8, 155, 171, 1) 0%, rgba(13, 181, 200, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#089bab', endColorstr='#0db5c8', GradientType=1);
 }
