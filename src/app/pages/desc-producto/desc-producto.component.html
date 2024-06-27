@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <!-- Sidebar -->
+
+    <!-- Page Content -->
+    <div id="content-page" class="content-page">
+        <!-- Navbar -->
+
+        <!-- Product Detail -->
+        <div class="container-fluid product-detail">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Product Image -->
+                    <img src="assets/images/blusaazul.png">
+                </div>
+                <div class="col-lg-6">
+                    <!-- Product Info -->
+                    <div class="product-info">
+                        <h1 class="product-name">{{ producto.nombre }}</h1>
+                        <p class="product-price">${{ producto.precio }}</p>
+                        <p class="product-description">{{ producto.descripcion }}</p>
+                        <button class="btn btn-primary add-to-cart" (click)="anadirAlCarrito()">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

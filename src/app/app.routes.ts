@@ -1,7 +1,8 @@
-import { HomeComponent } from "./pages/home/home.component";
 import { Routes } from "@angular/router";
+import { DescProductoComponent } from './pages/desc-producto/desc-producto.component';
 
 export const routes: Routes = [
+  { path: 'desc-producto', component: DescProductoComponent },
   {
     path: "",
     pathMatch: "full",
@@ -21,8 +22,7 @@ export const routes: Routes = [
   {
     path: "**",
     async loadComponent() {
-      return (await import("./pages/errors/page-404/page-404.component"))
-        .Page404Component;
+      return (await import("./pages/errors/page-404/page-404.component")).Page404Component;
     },
   },
 ];
