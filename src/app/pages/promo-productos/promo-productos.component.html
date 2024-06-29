@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <!-- Sidebar -->
+
+
+    <!-- Page Content -->
+    <div id="content-page" class="content-page">
+        <hospital-navbar></hospital-navbar>
+
+        <!-- Promo Product Detail -->
+        <div class="container-fluid promo-detail">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Promo Image -->
+                    <img src="assets/images/blusaverde.png">
+                </div>
+                <div class="col-lg-6">
+                    <!-- Promo Info -->
+                    <div class="promo-info">
+                        <h1 class="promo-name">Promoción Especial</h1>
+                        <p class="promo-description">
+                            ¡Obtén descuentos exclusivos con nuestro cupón especial! Asegúrate de ingresar el código de descuento a continuación y revisa los detalles de la promoción.
+                        </p>
+
+                        <form (submit)="aplicarCodigoDescuento()">
+                            <div class="form-group">
+                                <label for="codigo">Código de Descuento</label>
+                                <input id="codigo" type="text" class="form-control" [(ngModel)]="codigoDescuento" name="codigo">
+                            </div>
+                            <p class="promo-validity">Válido hasta: {{ fechaValidez | date:'shortDate' }}</p>
+                            <p class="promo-usage">Detalles de uso: {{ detallesUso }}</p>
+                            <button type="submit" class="btn btn-primary">Aplicar Código</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
