@@ -4,7 +4,7 @@
     <!-- Page Content -->
     <div id="content-page" class="content-page">
         <!-- Navbar -->
-        <hospital-navbar></hospital-navbar>
+        <app-navbar-logo></app-navbar-logo>
         <!-- Product Detail -->
         <div class="container-fluid product-detail">
             <div class="row">
@@ -24,7 +24,9 @@
                             <span class="quantity">{{ cantidad }}</span>
                             <button class="btn btn-outline-primary" (click)="incrementarCantidad()">+</button>
                         </div>
-                        <button class="btn btn-primary add-to-cart" (click)="anadirAlCarrito()">Añadir al Carrito</button>
+                        <a href="/carrito">
+                            <button class="btn btn-primary add-to-cart" (click)="anadirAlCarrito()">Añadir al Carrito</button>
+                        </a>
 
                         <!-- Product Rating -->
                         <div class="product-rating">
@@ -48,9 +50,6 @@
                                 <p class="review-text">{{ comentario.texto }}</p>
                             </div>
                         </div>
-                        <a href="/carrito">
-                            <button class="btn btn-primary add-to-cart" (click)="anadirAlCarrito()">Añadir al Carrito</button>
-                        </a>
                     </div>
                 </div>
             </div>

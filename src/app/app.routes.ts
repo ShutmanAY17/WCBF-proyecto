@@ -3,8 +3,11 @@ import { DescProductoComponent } from './pages/desc-producto/desc-producto.compo
 import { PromoProductosComponent} from "./pages/promo-productos/promo-productos.component";
 import { CommonModule } from '@angular/common';
 import { CarritoComponent } from "./pages/carrito/carrito.component";
+import {PerfilClienteComponent} from "./pages/perfil-cliente/perfil-cliente.component";
+
 
 export const routes: Routes = [
+  { path: 'perfil-cliente', component: PerfilClienteComponent },
   { path: 'promo-productos', component: PromoProductosComponent },
   { path: 'carrito' , component: CarritoComponent },
   { path: 'desc-producto', component: DescProductoComponent },

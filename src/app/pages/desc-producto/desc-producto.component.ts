@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';  // Asegúrate de importar Commo
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import {NavbarComponent} from "../../components/navbar/navbar.component";
+import {NavbarLogoComponent} from "../../components/navbar-logo/navbar-logo.component";
 
 @Component({
     selector: 'app-desc-producto',
     templateUrl: './desc-producto.component.html',
     styleUrls: ['./desc-producto.component.scss'],
     standalone: true,
-    imports: [CommonModule, FormsModule, RouterOutlet, NavbarComponent]  // Asegúrate de importar FormsModule y CommonModule
+    imports: [CommonModule, FormsModule, RouterOutlet, NavbarComponent, NavbarLogoComponent]  // Asegúrate de importar FormsModule y CommonModule
 })
 export class DescProductoComponent {
     producto = {
