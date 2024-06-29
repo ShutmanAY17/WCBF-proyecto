@@ -1,0 +1,62 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background: linear-gradient(to bottom right, #ff18b2, #ff1); /* Fondo degradado */
+  font-family: Arial, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: calc(100% - 40px); /* Ancho completo menos 20px de margen en cada lado */
+  padding: 20px; /* 20px de margen de cada lado */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1200px; /* Ajusta según sea necesario */
+  height: 80vh; /* Ajusta el alto según sea necesario */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff; /* Fondo blanco para el contenedor */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Incluye padding y borde en el ancho y alto */
+}
+
+.left-section {
+  flex: 0 0 30%; /* La imagen ocupa el 30% del ancho */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-right: 1px solid #ccc; /* Línea divisoria entre secciones */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+
+  .profile-image-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff; /* Borde blanco alrededor de la imagen */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.right-section {
+  flex: 1; /* Ocupa el espacio restante */
+  padding: 20px; /* Ajusta según sea necesario */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}

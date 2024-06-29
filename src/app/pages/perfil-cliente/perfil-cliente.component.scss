@@ -1,0 +1,140 @@
+/* Aplica el fondo degradado a toda la página */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(to bottom right, #ff18b2, #ff1); /* Fondo degradado */
+  font-family: Arial, sans-serif;
+}
+
+.profile-page {
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px; /* Añade espacio para el navbar y espacio a los lados */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+  background: #f9d6d5;
+
+}
+
+.profile-container {
+  max-width: 600px;
+  width: 100%; /* Asegura que no se expanda más allá de su contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff; /* Fondo blanco para el contenedor del perfil */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Incluye padding y borde en el ancho y alto */
+  margin-top: 60px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .profile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .profile-picture {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid #fff; /* Borde blanco alrededor de la imagen */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        margin-bottom: 10px; /* Espacio para el botón cambiar */
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .change-btn {
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 5px;
+
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .profile-details {
+      flex: 1;
+      margin-left: 20px;
+
+      .form-group {
+        margin-bottom: 15px;
+        position: relative;
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+
+        input {
+          width: calc(100% - 30px);
+          padding: 8px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+
+          &:focus {
+            outline: none;
+            border-color: #007bff;
+          }
+        }
+
+        i {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: #ccc;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .buttons-container {
+    text-align: right;
+    margin-top: 20px;
+
+    .update-btn {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        background-color: #218838;
+      }
+    }
+  }
+}
