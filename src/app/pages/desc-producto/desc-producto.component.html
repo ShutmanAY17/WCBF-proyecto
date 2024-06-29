@@ -4,13 +4,13 @@
     <!-- Page Content -->
     <div id="content-page" class="content-page">
         <!-- Navbar -->
-
+        <hospital-navbar></hospital-navbar>
         <!-- Product Detail -->
         <div class="container-fluid product-detail">
             <div class="row">
                 <div class="col-lg-6">
                     <!-- Product Image -->
-                    <img src="assets/images/blusaazul.png">
+                    <img class="product-image" [src]="producto.imagen" alt="Producto">
                 </div>
                 <div class="col-lg-6">
                     <!-- Product Info -->
@@ -18,7 +18,36 @@
                         <h1 class="product-name">{{ producto.nombre }}</h1>
                         <p class="product-price">${{ producto.precio }}</p>
                         <p class="product-description">{{ producto.descripcion }}</p>
+
+                        <div class="quantity-selector">
+                            <button class="btn btn-outline-primary" (click)="decrementarCantidad()">-</button>
+                            <span class="quantity">{{ cantidad }}</span>
+                            <button class="btn btn-outline-primary" (click)="incrementarCantidad()">+</button>
+                        </div>
                         <button class="btn btn-primary add-to-cart" (click)="anadirAlCarrito()">Añadir al Carrito</button>
+
+                        <!-- Product Rating -->
+                        <div class="product-rating">
+                            <span class="rating-stars">
+                                <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+                                    <i [ngClass]="getStarClass(star)"></i>
+                                </ng-container>
+                            </span>
+                            <span class="rating-number">{{ producto.calificacion }}</span>
+                        </div>
+
+                        <!-- Customer Reviews -->
+                        <div class="customer-reviews">
+                            <h3>Comentarios</h3>
+                            <div *ngFor="let comentario of comentarios" class="review">
+                                <div class="review-stars">
+                                    <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+                                        <i [ngClass]="getStarClass(star, comentario.calificacion)"></i>
+                                    </ng-container>
+                                </div>
+                                <p class="review-text">{{ comentario.texto }}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
