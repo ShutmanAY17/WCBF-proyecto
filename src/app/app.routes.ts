@@ -4,9 +4,12 @@ import { PromoProductosComponent} from "./pages/promo-productos/promo-productos.
 import { CommonModule } from '@angular/common';
 import { CarritoComponent } from "./pages/carrito/carrito.component";
 import {PerfilClienteComponent} from "./pages/perfil-cliente/perfil-cliente.component";
-
+import { AnadirProductosComponent } from "./pages/anadir-productos/anadir-productos.component";
+import { LoginComponent} from "./pages/login/login.component";
 
 export const routes: Routes = [
+  { path: 'anadir-productos', component:AnadirProductosComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'perfil-cliente', component: PerfilClienteComponent },
   { path: 'promo-productos', component: PromoProductosComponent },
   { path: 'carrito' , component: CarritoComponent },

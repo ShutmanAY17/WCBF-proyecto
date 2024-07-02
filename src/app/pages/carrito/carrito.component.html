@@ -1,82 +1,60 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .producto {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .producto img {
-            max-width: 100px;
-            max-height: 100px;
-            margin-right: 20px;
-        }
-        .descripcion {
-            flex: 1;
-        }
-        .precio {
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-<h1>Carrito de Compras</h1>
+<div class="wrapper">
+    <!-- Sidebar u otros elementos según tu diseño -->
 
-<div id="carrito">
-    <!-- Aquí se agregarán dinámicamente los productos -->
-</div>
+    <!-- Contenido de la página -->
+    <div id="content-page" class="content-page">
+        <!-- Navbar u otro componente de navegación -->
+        <app-navbar-logo></app-navbar-logo>
 
-<script>
-    var productos = [
-        {
-            nombre: "Camiseta",
-            imagen: "https://via.placeholder.com/150",
-            descripcion: "Camiseta de algodón",
-            precio: 25.50
-        },
-        {
-            nombre: "Pantalones",
-            imagen: "https://via.placeholder.com/150",
-            descripcion: "Pantalones vaqueros",
-            precio: 39.99
-        }
-    ];
-
-
-    function mostrarProductos() {
-        var carrito = document.getElementById("carrito");
-
-        productos.forEach(function(producto) {
-            var productoHTML = `
-                    <div class="producto">
-                        <img src="${producto.imagen}" alt="${producto.nombre}">
-                        <div class="descripcion">
-                            <h3>${producto.nombre}</h3>
-                            <p>${producto.descripcion}</p>
+        <!-- Lista de Productos en el Carrito -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th>Acciones</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let item of carrito">
+                            <td>{{ item.nombre }}</td>
+                            <td>${{ item.precio }}</td>
+                            <td>
+                                <div class="quantity-selector">
+                                    <button class="btn btn-outline-primary"
+                                            (click)="decrementarCantidad(item)">-</button>
+                                    <span class="quantity">{{ item.cantidad }}</span>
+                                    <button class="btn btn-outline-primary"
+                                            (click)="incrementarCantidad(item)">+</button>
+                                </div>
+                            </td>
+                            <td>${{ calcularSubtotal(item) }}</td>
+                            <td>
+                                <button class="btn btn-danger" (click)="eliminarDelCarrito(item)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-6">
+                    <div class="cart-summary">
+                        <h2>Resumen del Carrito</h2>
+                        <div class="total">
+                            <p>Total: ${{ calcularTotal() }}</p>
                         </div>
-                        <div class="precio">$ ${producto.precio.toFixed(2)}</div>
+                        <button class="btn btn-primary checkout">Proceder al Pago</button>
                     </div>
-                `;
-            carrito.innerHTML += productoHTML;
-        });
-    }
-
-    // Mostrar los productos al cargar la página
-    mostrarProductos();
-</script>
-</body>
-</html>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
